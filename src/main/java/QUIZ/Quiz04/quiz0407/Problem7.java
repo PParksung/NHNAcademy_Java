@@ -6,7 +6,7 @@ package QUIZ.Quiz04.quiz0407;
 public class Problem7 {
 
     public static void main(String[] args) {
-        Mosaic.open(10, 10, 25, 25);
+        //Mosaic.open(10, 10, 25, 25);
 
         // TODO: 두 사각형의 색상을 교환
         swapColors(0, 0, 1, 1);

@@ -6,7 +6,7 @@ package QUIZ.Quiz04.quiz0407;
 public class Problem9 {
 
     public static void main(String[] args) {
-        Mosaic.open(10, 10, 25, 25);
+        //Mosaic.open(10, 10, 25, 25);
 
         // TODO: 100번의 색상 교란 애니메이션 실행
         animateRandomColors(100);

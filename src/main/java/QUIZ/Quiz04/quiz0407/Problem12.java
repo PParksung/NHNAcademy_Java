@@ -6,7 +6,7 @@ package QUIZ.Quiz04.quiz0407;
 public class Problem12 {
 
     public static void main(String[] args) {
-        Mosaic.open(5, 5, 25, 25);
+        //Mosaic.open(5, 5, 25, 25);
 
         // TODO: 임의의 색상으로 채우기
         fillRandomColors();

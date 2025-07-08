@@ -8,6 +8,15 @@ public class Problem9 {
      */
     public static void reverseArray(int[] list) {
         // TODO: 배열을 반대로 뒤집기
+        int left = 0;
+        int right = list.length - 1;
+        while (left < right) {
+            int temp = list[left];
+            list[left] = list[right];
+            list[right] = temp;
+            left++;
+            right--;
+        }
     }
 
     public static void main(String[] args) {

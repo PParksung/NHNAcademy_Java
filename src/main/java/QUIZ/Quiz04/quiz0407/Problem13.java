@@ -9,7 +9,7 @@ public class Problem13 {
     static int currentCol = 5;
 
     public static void main(String[] args) {
-        Mosaic.open(10, 10, 25, 25);
+        //Mosaic.open(10, 10, 25, 25);
 
         // TODO: 랜덤 이동 실행
         randomWalk(20);

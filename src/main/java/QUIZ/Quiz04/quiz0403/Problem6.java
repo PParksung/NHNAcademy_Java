@@ -10,8 +10,18 @@ public class Problem6 {
      */
     public static int findMax(int[] list) {
         // TODO: 배열에서 가장 큰 값을 찾아 반환
+        int max = list[0];
+        for(int i = 0; i < list.length; i++){
+            if(list[i] > max){
+                max = list[i];
+            }
+        }
+
         // TODO: 배열이 비어 있으면 IllegalArgumentException 던지기
-        return 0;
+        if(list.length<0){
+            throw new IllegalArgumentException();
+        }
+        return max;
     }
 
     public static void main(String[] args) {

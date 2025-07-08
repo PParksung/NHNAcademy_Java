@@ -9,7 +9,30 @@ public class Problem19 {
      */
     public static boolean isSorted(int[] list) {
         // TODO: 배열이 오름차순으로 정렬되었는지 확인
-        return false; // TODO: 정렬 여부 반환
+
+        int[] compare = new int[list.length];
+        for(int i=0; i<list.length; i++){
+            compare[i] = list[i];
+        }
+
+        for(int i=0; i<list.length-1; i++){
+            for(int j=0; j<list.length-1-i; j++){
+                if(list[j] > list[j+1]){
+                    int temp = list[j];
+                    list[j] = list[j+1];
+                    list[j+1] = temp;
+                }
+            }
+        }
+
+        boolean result = true;
+
+        for(int i=0; i<list.length; i++){
+            if(compare[i] != list[i]){
+                result = false;
+            }
+        }
+        return result;    // TODO: 정렬 여부 반환
     }
 
     public static void main(String[] args) {

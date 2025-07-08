@@ -10,7 +10,22 @@ public class Problem13 {
      */
     public static int[] removeElement(int[] list, int target) {
         // TODO: 배열에서 특정 값(target)을 제거한 새 배열 반환
-        return new int[0]; // TODO: 수정된 배열 반환
+
+        int count = 0;
+        for(int i=0; i<list.length; i++){
+            if(list[i] != target){
+                count++;
+            }
+        }
+        int[] result = new int[count];
+        int index = 0;
+        for(int i=0; i<list.length; i++){
+            if(list[i] != target){
+                result[index] = list[i];
+                index++;
+            }
+        }
+        return result; // TODO: 수정된 배열 반환
     }
 
     public static void main(String[] args) {

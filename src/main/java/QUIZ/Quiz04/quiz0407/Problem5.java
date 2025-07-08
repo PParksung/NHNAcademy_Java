@@ -9,7 +9,7 @@ public class Problem5 {
     static int currentCol = 5;
 
     public static void main(String[] args) {
-        Mosaic.open(10, 10, 25, 25);
+        //Mosaic.open(10, 10, 25, 25);
 
         for (int i = 0; i < 50; i++) {
             // TODO: 현재 위치를 무작위로 이동

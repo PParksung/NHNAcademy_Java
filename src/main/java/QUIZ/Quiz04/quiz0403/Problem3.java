@@ -10,7 +10,15 @@ public class Problem3 {
     public static String makeRow(char ch, int N) {
         // TODO: N이 0 이하이면 빈 문자열
         // TODO: 주어진 문자를 N번 반복하는 문자열
-        return null;
+        String result = "";
+        if (N <= 0) {
+            result += "(empty line)";
+        }else{
+            for (int i = 1; i <= N; i++) {
+                result += ch;
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {

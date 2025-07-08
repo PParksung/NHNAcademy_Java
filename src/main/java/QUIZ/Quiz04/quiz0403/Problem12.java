@@ -10,6 +10,11 @@ public class Problem12 {
      */
     public static boolean containsValue(int[] list, int target) {
         // TODO: 배열에 특정 값(target)이 포함되어 있는지 확인
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == target) {
+                return true;
+            }
+        }
         return false; // TODO: 포함 여부 반환
     }
 

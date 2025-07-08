@@ -9,7 +9,12 @@ public class Problem10 {
      */
     public static boolean isPalindrome(int[] list) {
         // TODO: 배열이 회문인지 확인
-        return false; // TODO: 회문이면 true, 아니면 false 반환
+        for(int i=0; i<list.length; i++) {
+            if(list[i] != list[list.length-i-1]){
+                return false;
+            }
+        }
+        return true; // TODO: 회문이면 true, 아니면 false 반환
     }
 
     public static void main(String[] args) {

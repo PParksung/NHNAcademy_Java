@@ -10,7 +10,24 @@ public class Problem20 {
      */
     public static int[] intersectArrays(int[] arr1, int[] arr2) {
         // TODO: 두 배열의 교집합을 구하여 새 배열 반환
-        return new int[0]; // TODO: 교집합 배열 반환
+        int[] temp = new int[arr1.length];
+        int index = 0;
+
+        for (int i = 0; i < arr1.length; i++) {
+            for(int j = 0;  j< arr2.length; j++){
+                if (arr1[i] == arr2[j]){
+                    temp[index] = arr1[i];
+                    index++;
+                }
+            }
+        }
+
+        int[] result = new int[index];
+        for (int i = 0; i < index; i++) {
+            result[i] = temp[i];
+        }
+
+        return result; // TODO: 교집합 배열 반환
     }
 
     public static void main(String[] args) {

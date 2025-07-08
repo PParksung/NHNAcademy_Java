@@ -10,8 +10,25 @@ public class Problem8 {
      */
     public static int findMin(int[] list, boolean findMax) {
         // TODO: 배열에서 가장 큰 값 또는 가장 작은 값을 찾아 반환
+        if(list.length==0){
+            throw new IllegalArgumentException();
+        }
+
+        int result = list[0];
+        for(int i=0; i<list.length;i++){
+            if(findMax){ // 최대
+                if(list[i] > result){
+                    result = list[i];
+                }
+            }else{
+                if(list[i] < result){
+                    result = list[i];
+                }
+            }
+        }
         // TODO: 배열이 비어 있으면 IllegalArgumentException 던지기
-        return 0;
+
+        return result;
     }
 
     public static void main(String[] args) {

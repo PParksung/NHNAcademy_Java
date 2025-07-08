@@ -10,7 +10,13 @@ public class Problem11 {
      */
     public static int countOccurrences(int[] list, int target) {
         // TODO: 배열에서 특정 값(target)의 등장 횟수 계산
-        return 0; // TODO: 등장 횟수 반환
+        int count = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == target) {
+                count++;
+            }
+        }
+        return count; // TODO: 등장 횟수 반환
     }
 
     public static void main(String[] args) {
