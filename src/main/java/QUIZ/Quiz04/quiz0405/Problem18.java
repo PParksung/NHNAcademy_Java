@@ -10,7 +10,7 @@ public class Problem18 {
 
         // TODO: 람다와 Stream API를 사용하여 10보다 큰 값 필터링
         numbers.stream()
-               .filter(null) // TODO: 조건 람다 작성
+               .filter(n -> n > 10) // TODO: 조건 람다 작성
                .forEach(System.out::println);
     }
 } 

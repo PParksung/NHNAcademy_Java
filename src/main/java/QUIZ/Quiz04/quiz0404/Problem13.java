@@ -1,13 +1,20 @@
 package QUIZ.Quiz04.quiz0404;
 
+import java.util.Scanner;
+
 // Quiz 4-4 문제 13
 public class Problem13 {
     public static void main(String[] args) {
-        // TODO: calculateAverage 서브루틴을 호출하여 두 숫자의 평균 반환
+        Scanner sc = new Scanner(System.in);
+        System.out.print("첫 번째 숫자를 입력하세요: ");
+        double a = sc.nextDouble();
+        System.out.print("두 번째 숫자를 입력하세요: ");
+        double b = sc.nextDouble();
+        double avg = calculateAverage(a, b);
+        System.out.println(a + "와 " + b + "의 평균: " + avg);
     }
 
     public static double calculateAverage(double a, double b) {
-        // TODO: 두 수의 평균을 계산하여 반환
-        return 0;
+        return (a + b) / 2;
     }
 } 

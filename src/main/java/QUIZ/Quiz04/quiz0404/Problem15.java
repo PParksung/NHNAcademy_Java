@@ -1,15 +1,25 @@
 package QUIZ.Quiz04.quiz0404;
 
+import java.util.Scanner;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 // Quiz 4-4 문제 15
 public class Problem15 {
     public static void main(String[] args) {
-        // TODO: daysBetween 서브루틴을 호출하여 두 날짜 간의 차이 계산
+        Scanner sc = new Scanner(System.in);
+        System.out.print("시작 날짜: ");
+        String startStr = sc.next();
+        System.out.print("끝 날짜: ");
+        String endStr = sc.next();
+        LocalDate start = LocalDate.parse(startStr);
+        LocalDate end = LocalDate.parse(endStr);
+        long diff = daysBetween(start, end);
+        System.out.println("날짜 차이: " + diff + "일");
     }
 
     public static long daysBetween(LocalDate start, LocalDate end) {
-        // TODO: 두 날짜 간 차이를 일수로 반환
-        return 0;
+        // 두 날짜 차이 반환
+        return ChronoUnit.DAYS.between(start, end);
     }
 } 

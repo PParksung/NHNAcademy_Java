@@ -9,8 +9,8 @@ public class Problem13 {
 
         // TODO: Optional 값 처리 람다 작성
         optionalValue.ifPresentOrElse(
-            null, // TODO: 값이 있을 때 출력
-            null  // TODO: 값이 없을 때 메시지 출력
+            value -> System.out.println(value), // TODO: 값이 있을 때 출력
+            () -> System.out.println("No value") // TODO: 값이 없을 때 메시지 출력
         );
     }
 } 

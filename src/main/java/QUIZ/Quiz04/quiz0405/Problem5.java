@@ -9,7 +9,7 @@ public class Problem5 {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
         // TODO: Consumer 인터페이스를 사용하여 요소를 출력하는 람다 작성
-        java.util.function.Consumer<Integer> printElement = null;
+        java.util.function.Consumer<Integer> printElement = n -> System.out.print(n + " ");
 
         // 리스트 요소 출력
         numbers.forEach(printElement);

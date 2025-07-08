@@ -9,6 +9,6 @@ public class Problem12 {
         List<String> items = Arrays.asList("A", "B", "C");
 
         // TODO: 메서드 참조를 사용하여 출력
-        items.forEach(null); // TODO: 메서드 참조 작성
+        items.forEach(System.out::println); // 메서드 참조
     }
 } 

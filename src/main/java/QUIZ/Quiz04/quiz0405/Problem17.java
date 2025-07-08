@@ -11,7 +11,7 @@ public class Problem17 {
 
         // TODO: 람다와 Stream API를 사용하여 최대값 찾기
         Optional<Integer> max = numbers.stream()
-                                       .max(null); // TODO: Comparator 작성
+                                       .max((a, b) -> a - b); // TODO: Comparator 작성
 
         // 결과 출력
         max.ifPresentOrElse(

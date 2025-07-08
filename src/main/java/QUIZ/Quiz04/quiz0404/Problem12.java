@@ -1,13 +1,18 @@
 package QUIZ.Quiz04.quiz0404;
 
+import java.util.Scanner;
+
 // Quiz 4-4 문제 12
 public class Problem12 {
     public static void main(String[] args) {
-        // TODO: square 서브루틴을 호출하여 숫자의 제곱 출력
+        Scanner sc = new Scanner(System.in);
+        System.out.print("숫자를 입력하세요: ");
+        int num = sc.nextInt();
+        int sq = square(num);
+        System.out.println(num + "의 제곱: " + sq);
     }
 
     public static int square(int num) {
-        // TODO: 숫자의 제곱을 반환
-        return 0;
+        return num * num;
     }
 } 

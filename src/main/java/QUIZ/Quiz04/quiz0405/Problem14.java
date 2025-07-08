@@ -12,6 +12,6 @@ public class Problem14 {
         map.put(3, "Three");
 
         // TODO: 람다와 forEach를 사용하여 키-값 출력
-        map.forEach(null);
+        map.forEach((k, v) -> System.out.println(k + " - " + v));
     }
 } 

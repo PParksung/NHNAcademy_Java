@@ -10,8 +10,8 @@ public class Problem15 {
 
         // TODO: 람다와 스트림 API를 사용하여 짝수 제곱 출력
         numbers.stream()
-            .filter(null) // TODO: 짝수 필터 조건 작성
-            .map(null) // TODO: 제곱 람다 작성
+            .filter(n -> n % 2 == 0)
+            .map(n -> n * n)
             .forEach(System.out::println);
     }
 } 

@@ -9,10 +9,10 @@ public class Problem20 {
         List<String> words = Arrays.asList("Hello", "Lambda", "World");
 
         // TODO: Stream과 Collectors를 사용하여 문자열 연결
-        //String result = words.stream()
-                        //     .reduce(null); // TODO: 문자열 연결 람다 작성
-
+        String result = words.stream()
+                             .reduce((a, b) -> a + " " + b)
+                             .orElse("");
         // 결과 출력
-        //System.out.println("연결된 문자열: " + result); // 출력: 연결된 문자열: Hello Lambda World
+        System.out.println("연결된 문자열: " + result); // 출력: 연결된 문자열: Hello Lambda World
     }
 } 
