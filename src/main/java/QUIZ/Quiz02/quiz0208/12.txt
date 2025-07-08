@@ -1,0 +1,5 @@
+//Quiz 2-8 문제 12
+
+String은 참조 타입이지만 예약어가 아닌 사용자 정의 클래스입니다.
+반면 int, double, boolean은 언어에 내장된 기본형(Primitive type) 키워드이므로
+IDE가 서로 다른 색으로 구분해 줍니다.

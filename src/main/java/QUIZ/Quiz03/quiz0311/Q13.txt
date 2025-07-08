@@ -1,0 +1,8 @@
+// Quiz 3-11 문제 13
+R
+M
+N
+
+startWord가 true일 때만 문자를 출력
+' ' 다음에 오는 문자가 새 단어의 첫 글자
+따라서 "Richard M. Nixon" 에서 각 단어 첫 글자인 R, M, N 출력
