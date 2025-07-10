@@ -24,6 +24,13 @@ public class Problem15 {
 
     public static int[][] rotateMatrix(int[][] matrix) {
         // TODO: 행렬을 시계 방향으로 90도 회전
-        return null; // 임시 반환값
+        int n = matrix.length;
+        int[][] result = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                result[j][n - 1 - i] = matrix[i][j];
+            }
+        }
+        return result;
     }
 } 

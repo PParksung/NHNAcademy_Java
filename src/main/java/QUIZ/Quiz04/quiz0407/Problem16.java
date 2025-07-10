@@ -19,6 +19,17 @@ public class Problem16 {
 
     public static int[] filterGreaterThan(int[] array, int threshold) {
         // TODO: 기준값보다 큰 숫자들로 새 배열 생성
-        return null; // 임시 반환값
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > threshold) count++;
+        }
+        int[] result = new int[count];
+        int idx = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > threshold) {
+                result[idx++] = array[i];
+            }
+        }
+        return result;
     }
 } 

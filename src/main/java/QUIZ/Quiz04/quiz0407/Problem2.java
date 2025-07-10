@@ -18,7 +18,11 @@ public class Problem2 {
      * @return 정렬되었으면 true, 아니면 false
      */
     public static boolean isSorted(int[] array) {
-        // TODO: 배열 요소를 순차적으로 비교하여 정렬 여부 확인
-        return false; // 임시 반환값
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 } 

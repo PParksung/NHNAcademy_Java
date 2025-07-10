@@ -20,7 +20,9 @@ public class Problem6 {
      * @throws IllegalArgumentException 분모가 0일 경우 예외 발생
      */
     public static int divide(int numerator, int denominator) {
-        // TODO: 분모가 0인지 확인
-        return 0; // 임시 반환값
+        if (denominator == 0) {
+            throw new IllegalArgumentException("분모는 0이 불가능");
+        }
+        return numerator / denominator;
     }
 } 

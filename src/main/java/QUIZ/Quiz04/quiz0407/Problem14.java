@@ -15,6 +15,10 @@ public class Problem14 {
 
     public static int[] combineColors(int[] color1, int[] color2) {
         // TODO: 두 색상의 평균값 계산
-        return new int[]{0, 0, 0}; // 임시 반환값
+        int[] result = new int[3];
+        for (int i = 0; i < 3; i++) {
+            result[i] = (color1[i] + color2[i]) / 2;
+        }
+        return result;
     }
 } 

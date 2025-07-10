@@ -18,7 +18,12 @@ public class Problem8 {
      * @return 배열의 최대값
      */
     public static int findMax(int[] array) {
-        // TODO: 배열을 순회하며 최대값 찾기
-        return 0; // 임시 반환값
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 } 

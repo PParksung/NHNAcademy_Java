@@ -16,6 +16,8 @@ public class Problem10 {
     }
 
     public static void validateArray(int[] array) {
-        // TODO: 배열이 비어 있으면 예외 발생
+        if (array.length == 0) {
+            throw new IllegalArgumentException("배열이 비어 있습니다");
+        }
     }
 } 

@@ -18,6 +18,12 @@ public class Problem17 {
 
     public static int sumMatrix(int[][] matrix) {
         // TODO: 2차원 배열 요소의 합 계산
-        return 0; // 임시 반환값
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+        }
+        return sum;
     }
 } 

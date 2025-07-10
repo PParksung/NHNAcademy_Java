@@ -17,7 +17,10 @@ public class Problem19 {
     }
 
     public static int sumDiagonal(int[][] matrix) {
-        // TODO: 주 대각선 요소 합 계산
-        return 0; // 임시 반환값
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            sum += matrix[i][i];
+        }
+        return sum;
     }
 } 

@@ -1,13 +1,25 @@
 package QUIZ.Quiz04.quiz0409;
-// Quiz 4-9 문제 4.3: 주어진 숫자가 나올 때까지 주사위 두 개를 굴리는 rollFor 함수와 Snake eyes가 나올 때까지 굴린 횟수를 출력하는 프로그램의 기본 틀입니다.
+// Quiz 4-9 문제 4.3
 public class Problem3 {
-    // 목표 숫자가 나올 때까지 주사위를 굴리는 함수
     public static int rollFor(int target) {
-        // IllegalArgumentException 처리 포함, 구현은 직접 작성하세요.
-        return 0;
+        if (target < 2 || target > 12) {
+            throw new IllegalArgumentException("2~12 사이의 값만 허용");
+        }
+        int count = 0;
+        java.util.Random rand = new java.util.Random();
+        while (true) {
+            int d1 = rand.nextInt(6) + 1;
+            int d2 = rand.nextInt(6) + 1;
+            count++;
+            if (d1 + d2 == target) {
+                break;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {
-        // rollFor(2)를 사용하여 Snake eyes가 나올 때까지 굴린 횟수를 출력
+        int rolls = rollFor(2);
+        System.out.println(rolls);
     }
 } 

@@ -19,8 +19,13 @@ public class Problem1 {
      * @throws IllegalArgumentException 배열이 비어 있을 때 예외 발생
      */
     public static double calculateAverage(int[] array) {
-        // TODO: 배열이 비어 있는지 확인
-        // TODO: 배열 요소의 합을 계산하고 평균을 반환
-        return 0.0; // 임시 반환값
+        if (array.length == 0) {
+            throw new IllegalArgumentException("배열 빔");
+        }
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return (double)sum / array.length;
     }
 } 

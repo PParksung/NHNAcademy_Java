@@ -1,12 +1,28 @@
 package QUIZ.Quiz04.quiz0409;
-// Quiz 4-9 문제 4.1: 문자열을 대문자화하는 printCapitalized 서브루틴을 작성하세요.
+// Quiz 4-9 문제 4.1
 public class Problem1 {
-    // 문자열의 각 단어 첫 글자를 대문자로 변환하여 출력하는 서브루틴
     public static void printCapitalized(String str) {
-        // 구현은 직접 작성하세요.
+        boolean newWord = true;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (Character.isLetter(ch) && newWord) {
+                System.out.print(Character.toUpperCase(ch));
+                newWord = false;
+            } else {
+                System.out.print(ch);
+                if (!Character.isLetter(ch)) {
+                    newWord = true;
+                } else {
+                    newWord = false;
+                }
+            }
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        // 사용자 입력을 받아 printCapitalized를 테스트하는 코드 작성
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        String input = sc.nextLine();
+        printCapitalized(input);
     }
 } 
