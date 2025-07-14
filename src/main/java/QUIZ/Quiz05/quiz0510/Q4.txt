@@ -1,0 +1,5 @@
+// Quiz 5-10 문제 4
+fruit = new Kumquat();
+Kumquat클래스의 객체를 생성하고 그 객체를 가리키는 주소를 fruit에 저장
+
+컴퓨터는 Heap영역에 객체를 생성하고 생성자를 호출하고 생성된 객체의 주소값을 fruit에 저장

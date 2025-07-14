@@ -1,0 +1,2 @@
+// Quiz 5-10 문제 15
+obj.equals(null)의 결과는 거의 항상 f;alse라서

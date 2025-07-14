@@ -1,5 +1,7 @@
 package QUIZ.Quiz05.quiz0505;
 
+import java.util.Arrays;
+
 public class OOPQuiz5_5 {
     // Quiz 5-5 문제 1
     static class Problem1 {
@@ -233,21 +235,22 @@ public class OOPQuiz5_5 {
     static class Problem9 {
         static class Shape implements Comparable<Shape> {
             int size;
-            Shape(int size) { this.size = size; }
-            int getSize() { return size; }
+            Shape(int size) {
+                this.size = size;
+            }
             @Override
-            public int compareTo(Shape o) { return Integer.compare(this.size, o.size); }
-            @Override
-            public String toString() { return "Shape(size=" + size + ")"; }
+            public int compareTo(Shape other) {
+                return Integer.compare(this.size, other.size);
+            }
         }
         static void run() {
             System.out.println("9번 정답");
             // TODO: Shape 배열 생성 및 객체 추가
             // TODO: 크기 순으로 정렬 후 출력
             Shape[] arr = { new Shape(5), new Shape(2), new Shape(8) };
-            java.util.Arrays.sort(arr);
+            Arrays.sort(arr);
             for (Shape s : arr) {
-                System.out.println(s);
+                System.out.println("Shape size = "  + s.size);
             }
             System.out.println();
         }
@@ -262,13 +265,13 @@ public class OOPQuiz5_5 {
         static class Car extends Vehicle {
             @Override
             void drive() {
-                System.out.println("자동차가 달립니다.");
+                System.out.println("자동차 운전");
             }
         }
         static class Bike extends Vehicle {
             @Override
             void drive() {
-                System.out.println("자전거가 달립니다.");
+                System.out.println("자전거 운전");
             }
         }
         static void run() {
@@ -290,29 +293,37 @@ public class OOPQuiz5_5 {
             abstract double calculateArea();
         }
         static class Rectangle extends Shape {
-            double width, height;
+            double width;
+            double height
+                    ;
             // TODO: 생성자와 calculateArea 메서드 구현
             Rectangle(double width, double height) {
                 this.width = width;
                 this.height = height;
             }
             @Override
-            double calculateArea() { return width * height; }
+            double calculateArea() {
+                return width * height;
+            }
         }
         static class Circle extends Shape {
             double radius;
             // TODO: 생성자와 calculateArea 메서드 구현
-            Circle(double radius) { this.radius = radius; }
+            Circle(double radius) {
+                this.radius = radius;
+            }
             @Override
-            double calculateArea() { return Math.PI * radius * radius; }
+            double calculateArea() {
+                return Math.PI * radius * radius;
+            }
         }
         static void run() {
             System.out.println("11번 정답");
             // TODO: Rectangle 및 Circle 객체 생성 및 면적 출력
             Rectangle rect = new Rectangle(3, 4);
             Circle circle = new Circle(2);
-            System.out.println("사각형 면적: " + rect.calculateArea());
-            System.out.println("원 면적: " + circle.calculateArea());
+            System.out.println("사각형 넓이: " + rect.calculateArea());
+            System.out.println("원 넓이: " + circle.calculateArea());
             System.out.println();
         }
     }
@@ -330,7 +341,9 @@ public class OOPQuiz5_5 {
                 this.height = height;
             }
             @Override
-            double calculateArea() { return width * height; }
+            double calculateArea() {
+                return width * height;
+            }
         }
         static class Triangle extends Shape {
             double base, height;
@@ -339,7 +352,9 @@ public class OOPQuiz5_5 {
                 this.height = height;
             }
             @Override
-            double calculateArea() { return base * height / 2; }
+            double calculateArea() {
+                return base * height / 2;
+            }
         }
         static void run() {
             System.out.println("12번 정답");
@@ -360,26 +375,34 @@ public class OOPQuiz5_5 {
         static abstract class Animal {
             String name;
             // TODO: 생성자 및 move 메서드 정의
-            Animal(String name) { this.name = name; }
+            Animal(String name) {
+                this.name = name;
+            }
             abstract void move();
         }
         static class Bird extends Animal {
-            Bird(String name) { super(name); }
+            Bird(String name) {
+                super(name);
+            }
             @Override
-            void move() { System.out.println(name + "는 하늘을 납니다."); }
+            void move() {
+                System.out.println(name + "는 하늘을 납니다.");
+            }
         }
         static class Fish extends Animal {
-            Fish(String name) { super(name); }
+            Fish(String name) {
+                super(name);
+            }
             @Override
             void move() { System.out.println(name + "는 물속을 헤엄칩니다."); }
         }
         static void run() {
             System.out.println("13번 정답");
             // TODO: Bird 및 Fish 객체 생성 및 move 호출
-            Bird b = new Bird("참새");
-            Fish f = new Fish("금붕어");
-            b.move();
-            f.move();
+            Animal bird = new Bird("참새");
+            Animal fish = new Fish("참치");
+            bird.move();
+            fish.move();
             System.out.println();
         }
     }
@@ -418,11 +441,13 @@ public class OOPQuiz5_5 {
         }
         static class Car extends Vehicle {
             @Override
-            void drive() { System.out.println("자동차가 달립니다."); }
+            void drive() {
+                System.out.println("자동차 운전");
+            }
         }
         static class Truck extends Vehicle {
             @Override
-            void drive() { System.out.println("트럭이 달립니다."); }
+            void drive() { System.out.println("트럭 운전"); }
         }
         static void run() {
             System.out.println("15번 정답");
@@ -445,12 +470,16 @@ public class OOPQuiz5_5 {
         static class Rectangle implements Drawable {
             // TODO: draw 메서드 구현
             @Override
-            public void draw() { System.out.println("사각형을 그립니다."); }
+            public void draw() {
+                System.out.println("사각형을 그립니다.");
+            }
         }
         static class Circle implements Drawable {
             // TODO: draw 메서드 구현
             @Override
-            public void draw() { System.out.println("원을 그립니다."); }
+            public void draw() {
+                System.out.println("원을 그립니다.");
+            }
         }
         static void run() {
             System.out.println("16번 정답");
@@ -488,11 +517,10 @@ public class OOPQuiz5_5 {
     static class Problem18 {
         // TODO: Vehicle 클래스 정의
         final static class Vehicle {}
-        // 아래 코드는 컴파일 오류를 유발함
         // static class Car extends Vehicle {}
         static void run() {
             System.out.println("18번 정답");
-            System.out.println("final 클래스는 상속이 불가함(컴파일 오류 예시)");
+            System.out.println("final 클래스는 상속불가");
             System.out.println();
         }
     }
@@ -502,16 +530,15 @@ public class OOPQuiz5_5 {
         static class Vehicle {
             // TODO: final 메서드 정의
             final void startEngine() {
-                System.out.println("엔진을 시동합니다.");
+                System.out.println("엔진 시동");
             }
         }
-        // 아래 코드는 컴파일 오류를 유발함
         // static class Car extends Vehicle {
-        //     // TODO: 메서드 오버라이드 시도
-        //     // @Override
-        //     // void startEngine() {
-        //     //     System.out.println("Car 엔진을 시동합니다.");
-        //     // }
+        //      TODO: 메서드 오버라이드 시도
+        //      @Override
+        //      void startEngine() {
+        //          System.out.println("Car 엔진 시동");
+        //      }
         // }
         static void run() {
             System.out.println("19번 정답");
@@ -529,11 +556,11 @@ public class OOPQuiz5_5 {
         }
         static class Dog extends Animal {
             @Override
-            void eat() { System.out.println("개가 먹이를 먹습니다."); }
+            void eat() { System.out.println("개가 먹는다"); }
         }
         static class Fish extends Animal {
             @Override
-            void eat() { System.out.println("물고기가 먹이를 먹습니다."); }
+            void eat() { System.out.println("물고기가 먹는다"); }
         }
         static void run() {
             System.out.println("20번 정답");
